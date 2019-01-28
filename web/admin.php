@@ -3,7 +3,7 @@ require_once __DIR__ . '/../src/functions.php';
 
 if (!isset($_SESSION['admin'])) {
   header("Refresh: 2; url='index.php'");
-  echo 'нет доступа'; 
+  echo 'Нет доступа'; 
   exit;
 }
 

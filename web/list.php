@@ -2,18 +2,19 @@
 error_reporting(E_ALL);
 require_once __DIR__ . '/../src/functions.php';
 
+
   $list = glob('../Tests/*');
 
 if (empty($list)) {
   header("Refresh: 2; url='admin.php'");
-  echo 'ни одного теста не загружено'; 
+  echo 'Ни одного теста не загружено'; 
   exit;
 }
 
 if (empty($_SESSION['userName'])) {
   header($_SERVER['SERVER_PROTOCOL'] . ' 403 Forbidden');
   header("Refresh: 2; url='index.php'");
-  echo 'необходимо авторизоваться'; 
+  echo 'Необходимо авторизоваться'; 
   exit;
   
 }

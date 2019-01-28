@@ -2,8 +2,6 @@
 error_reporting(E_ALL);
 require_once __DIR__ . '/../src/functions.php';
 
-// print_r($_SESSION);
-
 if (isPost()) {
   if ($_POST['user'] === 'admin') {
   	if ( login( getParam('login'), getParam('password') ) ) {
@@ -23,7 +21,7 @@ if (isPost()) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Админка</title>
+	<title>Главная страница</title>
 	<style type="text/css">
 		input {
 			margin-bottom: 10px;
