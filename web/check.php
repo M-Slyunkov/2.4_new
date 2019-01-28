@@ -26,7 +26,6 @@ $wrong = 0;
 
 	for ($i=0; $i < count($tests); $i++) {
 		if (isset($_POST["ans$i"])) {
-		 echo $_POST["ans$i"] . " - " . $tests[$i]['correct'] . "<br>" ; //  - проверка
 			if ( $_POST["ans$i"] == $tests[$i]['correct'] ) {
 		    $correct++;
 			} else {
@@ -34,8 +33,6 @@ $wrong = 0;
 			  }
 		}	
 	}
-
- echo $_SESSION['userName'] . ' вы ответили правильно на ' . $correct . ' вопрос(а)';
 
 include_once __DIR__ . '/../src/GdGenerator.php';
 $imgGenerator = new GdGenerator();
